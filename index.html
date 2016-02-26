@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+	<script src="app.js"></script>
+</head>
+<body ng-app="myApp">
+	<div class="container-fluid" ng-controller="main">
+		<div class="row">
+			<div class="col-xs-12">
+				<button class="btn btn-default" ng-click="generateWords()">Words</button>
+				<button class="btn btn-default" ng-click="generateWords('pretty')">Decorated Words</button>
+				<button class="btn btn-default" ng-click="generatePhrase()">Phrase</button>
+				<button class="btn btn-default" ng-click="generatePhrase('pretty')">Decorated Phrase</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="word"></div>
+				<div class="phrase"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
