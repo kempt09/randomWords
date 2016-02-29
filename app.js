@@ -72,31 +72,31 @@ app.controller('main', ['$scope', function($scope){
 	$scope.generateWords = function(decorate){
 		$scope.someClass();
 		var addPara = document.getElementById('word');
-		var p = document.createElement('p');
+		var p = document.createElement('span');
 		var item;
 		var index = Math.floor(Math.random() * $scope.words.length);
-		item = $scope.words[index]
+		item = $scope.words[index];
 		if (decorate === 'pretty'){
 			addPara.appendChild(p);
-			p.innerHTML = '<span class="' + $scope.someClass() + '">' + item + '</span>';
+			p.innerHTML = '<span class="' + $scope.someClass() + '">' + item + " " + '</span>';
 		} else {
 			addPara.appendChild(p);
-			p.innerHTML = item;
+			p.innerHTML = item + " ";
 		}
 	};
 
 	$scope.generatePhrase = function(decorate){
 		var addPara = document.getElementById('word');
-		var p = document.createElement('p');
+		var p = document.createElement('span');
 		var item;
 		var index = Math.floor(Math.random() * $scope.phrases.length);
-		item = $scope.phrases[index]
+		item = $scope.phrases[index];
 		if (decorate === 'pretty'){
 			addPara.appendChild(p);
-			p.innerHTML = '<span class="' + $scope.someClass() + '">' + item + '</span>';
+			p.innerHTML = '<span class="' + $scope.someClass() + '">' + item + " " + '</span>';
 		} else {
 			addPara.appendChild(p);
-			p.innerHTML = item;
+			p.innerHTML = item + " ";
 		}
 	};
 
